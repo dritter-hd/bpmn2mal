@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>LayeredArchitecture</artifactId>
+        <groupId>com.sap.kth</groupId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>Database</artifactId>
+
+
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>8</source>
+                    <target>8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <properties>
+        <graphstream.version>1.3</graphstream.version>
+    </properties>
+
+    <dependencies>
+
+        <!--  Gson: Java to Json conversion -->
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>2.8.6</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>hasi</groupId>
+            <artifactId>hasi</artifactId>
+            <version>0.0.1</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/libs/corelang-0.0.2.jar</systemPath>
+        </dependency>
+
+
+        <!-- test -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
+        </dependency>
+        <!-- Graph - FIXME dependency should not be required -->
+        <dependency>
+            <groupId>com.sap.anaflow</groupId>
+            <artifactId>com.sap.anaflow.analysis.dataflow</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/../../resources/libs/com.sap.anaflow.analysis.dataflow-0.0.1-SNAPSHOT.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>com.sap.anagraph</groupId>
+            <artifactId>com.sap.anagraph.graph</artifactId>
+            <version>1.1.0-SNAPSHOT</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/../../resources/libs/com.sap.anagraph.graph-1.1.0-SNAPSHOT.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>com.sap.anagraph</groupId>
+            <artifactId>com.sap.anagraph.rules</artifactId>
+            <version>1.1.0-SNAPSHOT</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/../../resources/libs/com.sap.anagraph.rules-1.1.0-SNAPSHOT.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>com.sap.anagraph</groupId>
+            <artifactId>com.sap.anagraph.discovery.crawler</artifactId>
+            <version>1.1.0-SNAPSHOT</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/../../resources/libs/com.sap.anagraph.discovery.crawler-1.1.0-SNAPSHOT.jar</systemPath>
+        </dependency>
+
+        <!-- graph processing -->
+        <dependency>
+            <groupId>org.graphstream</groupId>
+            <artifactId>gs-core</artifactId>
+            <version>${graphstream.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.graphstream</groupId>
+            <artifactId>gs-algo</artifactId>
+            <version>${graphstream.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.graphstream</groupId>
+            <artifactId>gs-ui</artifactId>
+            <version>${graphstream.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.3.2</version>
+        </dependency>
+
+        <!-- cloning -->
+        <dependency>
+            <groupId>uk.com.robust-it</groupId>
+            <artifactId>cloning</artifactId>
+            <version>1.9.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.4</version>
+        </dependency>
+
+        <!-- logging -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.6.1</version>
+        </dependency>
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>1.1.3</version>
+        </dependency>
+
+        <dependency>
+            <groupId>commons-codec</groupId>
+            <artifactId>commons-codec</artifactId>
+            <version>1.15</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>5.3.2</version>
+        </dependency>
+
+    </dependencies>
+
+</project>

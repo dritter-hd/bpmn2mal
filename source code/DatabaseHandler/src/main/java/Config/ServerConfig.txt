@@ -1,0 +1,7 @@
+servers=tomcat,jetty,undertow,wildfly,nginx,apache,cloudfare,litespeed
+pubStartDate=1
+pubEndDate=1
+lastModifiedStart=2020-01-01
+lastModifiedEnd=1
+cvssV2Severity=1
+cvssV3Severity=HIGH
