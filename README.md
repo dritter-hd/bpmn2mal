@@ -7,6 +7,21 @@ This is a research prototype. We are taking no warranties for the functionality 
 - "examples" includes the example used in the paper. Please recognize that there were some manual adjustments for visualization purposes.
 - "source code" contains the prototype, which can be run using Maven
 
+## How to build
+
+Build with maven
+
+```
+cd source code
+mvn clean install
+```
+
+Formatting
+
+```
+mvn com.coveo:fmt-maven-plugin:format
+```
+
 ## Run
 
 - To run the prototype, go to "Startup/src/main/java/Startup" and execute the main method.
